@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+
+
+
+{%block content%}
+<h1>New User Form</h1>
+<ul>
+<form action ="/users/new" method="POST" id="form">
+    <label> First Name:</label><br>
+    <input type="text" name="fn"></input><br>
+    <label> Last Name:</label><br>
+    <tr><input type="text" name="ln"></input><br>
+    <label> Image URL:</label><br>
+    <input type="text" name="url"></input><br>
+<br><button id="button">Create New User</button>
+</form>
+</ul>
+<form action="/users" method="GET"> 
+<button>Cancel</button></form>
+{%endblock%}

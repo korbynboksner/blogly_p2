@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+
+
+{%block content%}
+<h1>New Tag Form</h1>
+<ul>
+<form action ="/tags/new" method="POST" id="form">
+    <label> Tag Name:</label><br>
+    <input type="text" name="tn"></input><br>
+    <br><button id="button">Create new tag</button>
+</form>
+</ul>
+<form action="/tags" method="GET"> 
+<button>Cancel</button></form>
+{%endblock%}

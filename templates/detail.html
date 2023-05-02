@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1>{{ user.first_name }} {{ user.last_name }}</h1>
+
+<img src="{{ user.image_url }}">
+
+<form action="/users/{{user.id}}/delete" method="POST"> 
+    <button>Delete User</button></form>
+<form action="/users/{{user.id}}/edit" method="GET"> 
+    <button>Edit</button></form>
+
+    <h2>Posts</h2>
+    <ul>
+        {% for p in post %}
+        <li><a href="/posts/{{ p.id }}">{{p.title}}</a></li>
+        {% endfor %}
+    </ul>
+<form action="/users/{{user.id}}/posts/new" method="GET"> 
+    <button>Add Post</button></form>
+<form action="/users" method="GET"> 
+    <button>Return Home</button></form>
+{%endblock%}

@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+
+
+
+{%block content%}
+<h1>Edit User Form</h1>
+<ul>
+<form action ="/users/{{user.id}}/edit" method="POST" id="form">
+    <label>Update First Name:</label><br>
+    <input type="text" name="fn" value="{{user.first_name}}"></input><br>
+    <label>Update Last Name:</label><br>
+    <tr><input type="text" name="ln" value="{{user.last_name}}"></input><br>
+    <label>Update Image URL:</label><br>
+    <input type="text" name="url" value="{{user.image_url}}"></input><br>
+<br><button id="button">Save Changes</button>
+</form>
+</ul>
+<form action="/users/{{user.id}}" method="GET"> 
+<button>Cancel</button></form>
+{%endblock%}

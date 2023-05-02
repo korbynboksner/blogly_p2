@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+
+
+{%block content%}
+<h1>New User Form</h1>
+<ul>
+<form action ="/posts/{{post.id}}/edit" method="POST" id="form">
+    <label>Update Title:</label><br>
+    <input type="text" name="tt" value="{{post.title}}"></input><br>
+    <label>Update Content:</label><br>
+    <tr><input type="text" name="ct" value="{{post.content}}"></input><br>
+<br><button id="button">Save Changes</button>
+</form>
+</ul>
+<form action="/posts/{{post.id}}" method="GET"> 
+<button>Cancel</button></form>
+{%endblock%}
